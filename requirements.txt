@@ -1,0 +1,12 @@
+Flask==2.3.2
+flask-cors==4.0.0
+google-generativeai==0.5.4
+python-dotenv==1.0.1
+youtube-transcript-api==0.6.2
+google-api-python-client==2.118.0
+
+googlesearch-python==1.2.3
+httpx>=0.25.0,<0.27
+oauth2client<4.0.0
+newspaper3k==0.2.8
+W

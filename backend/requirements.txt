@@ -1,0 +1,13 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+google-generativeai==0.5.4
+python-dotenv==1.0.1
+google-api-python-client==2.118.0
+youtube-search-python
+newspaper3k
+lxml
+duckduckgo-search
+requests
+httpx>=0.25.0,<0.27
+oauth2client<4.0.0

@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Ensure body takes full height for the sticky footer/input chat bar */
+  height: 100vh;
+  background-color: #ffffff; /* Changed to white */
+  color: #000000; /* Changed to black */
+}
+
+html.dark body {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  color: #000000; /* Ensure code blocks also use black text */
+}
+
+html.dark code {
+  color: #f3f4f6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%; /* Ensure React root also takes full height */
+  background-color: #ffffff; /* Ensure root background is also white */
+}
+
+html.dark #root {
+  background-color: #111827;
+}
+
+/* Custom scrollbar for chat area (WebKit browsers) */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray, will change to a subtle black/white scheme if needed */
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #888; /* Medium gray, will change to black */
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray, will change to a slightly lighter black if needed */
+}
+
+/* Basic styling for chat messages to ensure they look distinct */
+/* This is largely handled by Tailwind utilities in App.js, but can be a fallback */
+.chat-message-user {
+  /* Example: align-self: flex-end; background-color: #d1eaff; */
+}
+
+.chat-message-system {
+  /* Example: align-self: flex-start; background-color: #f0f0f0; */
+}
+
+/* You can add custom base styles or component classes here if needed */
+
+/* Enhanced markdown table styles */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose table th {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.prose table td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.prose table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.prose table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Dark mode table styles */
+html.dark .prose table th {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+html.dark .prose table td {
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+html.dark .prose table tr:nth-child(even) {
+  background-color: #374151;
+}
+
+html.dark .prose table tr:hover {
+  background-color: #4b5563;
+}
+
+/* Ensure markdown content is properly styled */
+.prose {
+  color: #374151;
+  line-height: 1.75;
+}
+
+html.dark .prose {
+  color: #d1d5db;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+html.dark .prose h1, 
+html.dark .prose h2, 
+html.dark .prose h3, 
+html.dark .prose h4, 
+html.dark .prose h5, 
+html.dark .prose h6 {
+  color: #f3f4f6;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+}
+
+.prose a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+html.dark .prose a {
+  color: #60a5fa;
+}
+
+.prose a:hover {
+  color: #1d4ed8;
+}
+
+html.dark .prose a:hover {
+  color: #93c5fd;
+} 
+
+/* Google Ads Styles */
+.google-ad {
+  position: relative;
+  z-index: 1;
+}
+
+.google-ad.adsbygoogle {
+  display: block;
+}
+
+.responsive-ad {
+  max-width: 100%;
+  height: auto;
+}
+
+.full-width-responsive {
+  width: 100%;
+}
+
+.banner-ad {
+  width: 100%;
+  max-width: 728px;
+  margin: 20px auto;
+}
+
+.sidebar-ad {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.in-content-ad {
+  width: 100%;
+  max-width: 728px;
+  margin: 30px auto;
+}
+
+.footer-ad {
+  width: 100%;
+  max-width: 728px;
+  margin: 20px auto;
+}
+
+/* Dark mode support for ads */
+.dark .google-ad {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+/* Mobile responsive ads */
+@media (max-width: 768px) {
+  .banner-ad,
+  .in-content-ad,
+  .footer-ad {
+    max-width: 320px;
+    min-height: 50px;
+  }
+  
+  .sidebar-ad {
+    max-width: 300px;
+    min-height: 250px;
+  }
+}
+
+/* Loading state for ads */
+.google-ad:empty::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+} 
